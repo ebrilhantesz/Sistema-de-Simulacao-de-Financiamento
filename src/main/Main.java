@@ -1,9 +1,3 @@
-/*
-Aluno: Eduardo Henrique Brilhante
-Disciplina: Fundamentos da Programação Orientada a Objetos (POO)
-Curso: Superior de Tecnologia em Análise e Desenvolvimento de Sistemas
-RA: 1112025201951
- */
 package main;
 import modelo.Financiamento;
 import util.InterfaceUsuario;
