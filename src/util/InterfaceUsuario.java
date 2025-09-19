@@ -5,9 +5,9 @@ public class InterfaceUsuario {
     Scanner scanner = new Scanner(System.in);
 
     // Atributos da classe InterfaceUsuario
-    double valorImovel;
-    int prazoFinanciamento;
-    double taxaJurosAnual;
+    private double valorImovel;
+    private int prazoFinanciamento;
+    private double taxaJurosAnual;
 
     // Contrutores da classe InterfaceUsuario
     public InterfaceUsuario(double pedirValorImovel, int pedirPrazoFinanciamento, double pedirTaxaJurosAnual) {

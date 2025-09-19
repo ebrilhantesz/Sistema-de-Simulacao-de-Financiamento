@@ -3,9 +3,9 @@ package modelo;
 public class Financiamento {
 
     // Atributos da classe Financiamento
-    private double valorImovel;
-    private int prazoFinanciamento;
-    private double taxaJurosAnual;
+    protected double valorImovel;
+    protected int prazoFinanciamento;
+    protected double taxaJurosAnual;
 
     // Getters da classe Financiamento
     public double getValorImovel() {
@@ -31,7 +31,15 @@ public class Financiamento {
 
     // Metodo para calcular o pagamento mensal
     public double calcularPagamentoMensal() {
-        return (this.valorImovel / (this.prazoFinanciamento * 12)) * (1 + (this.taxaJurosAnual / 12));
+        int meses = this.prazoFinanciamento * 12;
+        double taxaMensalDecimal = (this.taxaJurosAnual / 100.0) / 12.0;
+
+        if (taxaMensalDecimal == 0.0){
+            return this.valorImovel / meses;
+        }
+
+        double parcelaPrincipalMensal = this.valorImovel / meses;
+        return parcelaPrincipalMensal * (1.0 + taxaMensalDecimal);
     }
 
     // Metodo para calcular o valor total do pagamento
