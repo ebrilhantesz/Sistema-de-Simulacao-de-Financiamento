@@ -17,7 +17,7 @@ public class Main {
         InterfaceUsuario interfaceUsuario = new InterfaceUsuario();
         List<Financiamento> listaDeFinanciamento = new ArrayList<>();
 
-        // Metodo para pedir 4 financiamentos
+        // Metodo para pedir 5 financiamentos
         for (int i = 1; i <= 5; i++) {
             System.out.println("\n--- Financiamento " + i + " ---");
             double valorImovel = interfaceUsuario.pedirValorImovel();
@@ -60,6 +60,7 @@ public class Main {
             else if (f instanceof Terreno) tipo = "Terreno";
             else tipo = "Financiamento";
 
+            // Metodo para impressão dos resultados dos financiamentos
             System.out.printf("Financiamento %d (%s) – valor do imóvel: R$ %.2f, parcela mensal: R$ %.2f, valor total do financiamento: R$ %.2f%n", i + 1, tipo, valorImovel, parcelaMensal, valorFinanciamento);
         }
 
