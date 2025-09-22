@@ -1,6 +1,6 @@
 package modelo;
 
-public class Financiamento {
+public abstract class Financiamento {
 
     // Atributos da classe Financiamento
     protected double valorImovel;
