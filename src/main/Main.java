@@ -19,7 +19,7 @@ public class Main {
         // Perguntando ao usuário a quantidade de financiamentos que deseja cadastrar
         int quantidade = interfaceUsuario.pedirQuantidadeFinanciamentos();
 
-        // Metodo para pedir 5 financiamentos
+        // Metodo para pedir os financiamentos
         for (int i = 1; i <= quantidade; i++) {
             System.out.println("\n--- Financiamento " + i + " ---");
 
@@ -75,7 +75,8 @@ public class Main {
             Financiamento f = listaDeFinanciamento.get(i);
             double valorImovel = f.getValorImovel();
             double parcelaMensal = f.calcularPagamentoMensal();
-            double valorFinanciamento = f.calcularTotalPagamento();
+            int meses = f.getPrazoFinanciamento() * 12;
+            double valorFinanciamento = parcelaMensal * meses;
 
             totalImoveis += valorImovel;
             totalFinanciamentos += valorFinanciamento;
@@ -104,7 +105,7 @@ public class Main {
             }
         }
 
-        // Metodo para impressão do resultado da soma de todos os financiamentos
+        // Metodo para impressão do resultado da soma de todos os financiamentos e tambem metodo para impressão da soma das parcelas mensais
         System.out.printf("%nValor total de todos os imóveis: R$ %.2f. Valor total de todos os financiamentos: R$ %.2f%n", totalImoveis, totalFinanciamentos);
         System.out.printf("Soma das parcelas mensais de todos os financiamentos: R$ %.2f%n", somaParcelasMensais);
     }
