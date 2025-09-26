@@ -1,6 +1,9 @@
 package modelo;
 
-public class Apartamento extends Financiamento {
+import java.io.Serializable;
+
+public class Apartamento extends Financiamento implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     // Atributos da classe apartamento
     private int numeroVagasGaragemApartamento;
@@ -38,5 +41,17 @@ public class Apartamento extends Financiamento {
 
     public int getNumeroAndarApartamento() {
         return numeroAndarApartamento;
+    }
+
+    public String toString() {
+        StringBuilder ap = new StringBuilder();
+
+        ap.append(getValorImovel()).append("\n");
+        ap.append(getPrazoFinanciamento()).append("\n");
+        ap.append(getTaxaJurosAnual()).append("\n");
+        ap.append(getNumeroAndarApartamento()).append("\n");
+        ap.append(getNumeroVagasGaragemApartamento()).append("\n");
+
+        return ap.toString();
     }
 }

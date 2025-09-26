@@ -1,6 +1,9 @@
 package modelo;
 
-public class Terreno extends Financiamento {
+import java.io.Serializable;
+
+public class Terreno extends Financiamento implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     // Atributos da subclasse Terreno
     private String tipoZonaTerreno;
@@ -23,5 +26,16 @@ public class Terreno extends Financiamento {
     // Getters da subclasse Terreno
     public String getTipoZonaTerreno(){
         return tipoZonaTerreno;
+    }
+
+    public String toString() {
+        StringBuilder te = new StringBuilder();
+
+        te.append(getValorImovel()).append("\n");
+        te.append(getPrazoFinanciamento()).append("\n");
+        te.append(getTaxaJurosAnual()).append("\n");
+        te.append(getTipoZonaTerreno()).append("\n");
+
+        return te.toString();
     }
 }
