@@ -1,7 +1,6 @@
 package modelo;
 
 import util.AumentoMaiorDoQueJurosException;
-
 import java.io.Serializable;
 
 public class Casa extends Financiamento implements Serializable {

@@ -216,11 +216,11 @@ public class InterfaceUsuario {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Valor inválido! Digite 1 ou 2.");
-                scanner.next();
+                scanner.next(); // Para descartar entradas inválidas
                 opcaoZona = -1;
             } catch (Exception e) {
                 System.out.println("Erro inesperado: " + e.getMessage());
-                scanner.next();
+                scanner.next(); // Para descartar entradas inválidas
                 opcaoZona = -1;
             } finally {
             }

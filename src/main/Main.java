@@ -136,7 +136,6 @@ public class Main {
                 System.out.printf("    Tipo da zona: %s%n", t.getTipoZonaTerreno());
             }
         }
-
     }
 
     private static void salvarComoTexto(List<Financiamento> lista, String caminho) {
